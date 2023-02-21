@@ -1,5 +1,6 @@
 # Install AWX-operator on Ubuntu 20 using Minikube
 
+VM - 4 CPUs and 8GIGS of RAM and 40Gig Harddrive
 
 ## Install Kubectl 
 
@@ -86,7 +87,6 @@ Install awx operator, this takes about 2-3 min to spin up
 
 ```
 kubectl apply -f https://raw.githubusercontent.com/ansible/awx-operator/0.10.0/deploy/awx-operator.yaml
-kubectl get pods
 ```
 
 Create a deployment file call it vi awx-demo.yml
@@ -127,6 +127,7 @@ kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" | base
 Output will look like this.
 ```
 5opmmSFkMiux9srVeYBLUoCJudeq46LL
+
 ```
 
 Expose the deployment:
